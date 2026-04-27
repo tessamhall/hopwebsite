@@ -1,8 +1,9 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px; /* bigger text */
+    font-size: 18px;
     color: #111;
+    background: #fff;
 }
 
 /* Layout */
@@ -15,37 +16,47 @@ body {
     width: 30%;
     height: 100vh;
     position: fixed;
-    padding: 40px;
+    padding: 50px;
     box-sizing: border-box;
 }
 
 .sidebar h1 {
-    font-size: 20px;
-    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    letter-spacing: 0.5px;
 }
 
+/* NAV */
 .sidebar nav a {
     display: block;
     margin-bottom: 10px;
     text-decoration: none;
     color: #111;
+    font-size: 16px;
 }
 
-.sidebar nav a:hover {
-    text-decoration: underline;
-}
-
-/* Work list */
+/* WORK LIST */
 .work-list {
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
-.work-list p {
+.work {
     cursor: pointer;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+    user-select: none;
 }
 
-.work-list p:hover {
+.work:hover {
+    opacity: 1;
+}
+
+/* ACTIVE STATE */
+.work.active {
+    opacity: 1;
     text-decoration: underline;
 }
 
@@ -53,11 +64,14 @@ body {
 .content {
     margin-left: 30%;
     width: 70%;
-    padding: 40px;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* IMAGE FIX (smaller + nicer) */
+/* IMAGE */
 .content img {
-    max-width: 70%;
+    max-width: 75%;
     height: auto;
 }
