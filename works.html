@@ -9,49 +9,39 @@
 
 <body>
 
-<header>
-    <h1>Hope Florin</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="works.html">Works</a>
-        <a href="about.html">About</a>
-        <a href="cv.html">CV</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+<div class="container">
 
-<main>
-    <h2>Works</h2>
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+        <h1>Hope Florin</h1>
 
-    <div class="works">
-        <div class="work">
-            <img src="fig1.JPG">
-            <p>Work Title 1</p>
-        </div>
+        <nav>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+            <a href="cv.html">CV</a>
+        </nav>
 
-        <div class="work">
-            <img src="fig2.JPG">
-            <p>Work Title 2</p>
+        <div class="work-list">
+            <p onclick="showWork('fig1.JPG')">Work One</p>
+            <p onclick="showWork('fig2.JPG')">Work Two</p>
+            <p onclick="showWork('fig3.JPG')">Work Three</p>
+            <p onclick="showWork('fig4.JPG')">Work Four</p>
+            <p onclick="showWork('fig5.JPG')">Work Five</p>
         </div>
+    </aside>
 
-                <div class="work">
-            <img src="fig3.JPG">
-            <p>Work Title 3</p>
-        </div>
-              <div class="work">
-            <img src="fig4.JPG">
-            <p>Work Title 4</p>
-        </div>
-              <div class="work">
-            <img src="fig5.JPG">
-            <p>Work Title 5</p>
-        </div>
-    </div>
-</main>
+    <!-- RIGHT CONTENT -->
+    <main class="content">
+        <img id="main-image" src="fig1.png">
+    </main>
 
-<footer>
-    <p>© Hope Florin</p>
-</footer>
+</div>
+
+<script>
+function showWork(image) {
+    document.getElementById("main-image").src = image;
+}
+</script>
 
 </body>
 </html>
