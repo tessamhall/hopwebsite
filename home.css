@@ -75,3 +75,27 @@ body {
     max-width: 75%;
     height: auto;
 }
+
+
+.content {
+    margin-left: 30%;
+    width: 70%;
+    padding: 60px;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+/* spacing between text elements */
+.content p {
+    margin: 0 0 18px 0;
+    font-size: 16px;
+}
+
+/* headings spacing (for CV page etc.) */
+.content h2 {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 30px 0 10px 0;
+}
+
+
