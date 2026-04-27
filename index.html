@@ -11,6 +11,7 @@
 
 <div class="container">
 
+    <!-- LEFT SIDEBAR -->
     <aside class="sidebar">
 
         <h1>Hope Florin</h1>
@@ -21,87 +22,70 @@
             <a href="cv.html">CV</a>
         </nav>
 
+        <!-- SIMPLE WORK LIST (links instead of JS) -->
         <div class="work-list">
-
-            <p class="work active" data-img="fig1.JPG">Work One</p>
-            <p class="work" data-img="fig2.JPG">Work Two</p>
-            <p class="work" data-img="fig3.JPG">Work Three</p>
-            <p class="work" data-img="fig4.JPG">Work Four</p>
-            <p class="work" data-img="fig5.JPG">Work Five</p>
-            <p class="work" data-img="fig6.JPG">Work Six</p>
-            <p class="work" data-img="fig7.JPG">Work Seven</p>
-            <p class="work" data-img="fig8.jpg">Work Eight</p>
+            <a href="work1.html">Work One</a>
+            <a href="work2.html">Work Two</a>
+            <a href="work3.html">Work Three</a>
+            <a href="work4.html">Work Four</a>
+            <a href="work5.html">Work Five</a>
+            <a href="work6.html">Work Six</a>
+            <a href="work7.html">Work Seven</a>
+            <a href="work8.html">Work Eight</a>
         </div>
 
     </aside>
 
+    <!-- RIGHT CONTENT -->
     <main class="content">
 
-    <div class="gallery">
+        <div class="gallery">
 
-        <a href="work1.html" class="gallery-item">
-            <img src="fig1.JPG">
-            <p class="caption">Work One</p>
-        </a>
+            <a href="work1.html" class="gallery-item">
+                <img src="fig1.JPG" alt="Work One">
+                <p class="caption">Work One</p>
+            </a>
 
-        <a href="work2.html" class="gallery-item">
-            <img src="fig2.JPG">
-            <p class="caption">Work Two</p>
-        </a>
+            <a href="work2.html" class="gallery-item">
+                <img src="fig2.JPG" alt="Work Two">
+                <p class="caption">Work Two</p>
+            </a>
 
-        <a href="work3.html" class="gallery-item">
-            <img src="fig3.JPG">
-            <p class="caption">Work Three</p>
-        </a>
+            <a href="work3.html" class="gallery-item">
+                <img src="fig3.JPG" alt="Work Three">
+                <p class="caption">Work Three</p>
+            </a>
 
-        <a href="work4.html" class="gallery-item portrait">
-            <img src="fig4.JPG">
-            <p class="caption">Work Four</p>
-        </a>
+            <a href="work4.html" class="gallery-item portrait">
+                <img src="fig4.JPG" alt="Work Four">
+                <p class="caption">Work Four</p>
+            </a>
 
-        <a href="work5.html" class="gallery-item">
-            <img src="fig5.JPG">
-            <p class="caption">Work Five</p>
-        </a>
-        
-        <a href="work6.html" class="gallery-item portrait">
-            <img src="fig6.JPG">
-            <p class="caption">Work Six</p>
-        </a>
+            <a href="work5.html" class="gallery-item">
+                <img src="fig5.JPG" alt="Work Five">
+                <p class="caption">Work Five</p>
+            </a>
 
-          <a href="work7.html" class="gallery-item">
-            <img src="fig7.JPG">
-            <p class="caption">Work Seven</p>
-        </a>
+            <a href="work6.html" class="gallery-item portrait">
+                <img src="fig6.JPG" alt="Work Six">
+                <p class="caption">Work Six</p>
+            </a>
 
-        <a href="work8.html" class="gallery-item portrait">
-            <img src="fig8.JPG">
-            <p class="caption">Work Eight</p>
-        </a>
+            <a href="work7.html" class="gallery-item">
+                <img src="fig7.JPG" alt="Work Seven">
+                <p class="caption">Work Seven</p>
+            </a>
 
-    </div>
+            <a href="work8.html" class="gallery-item portrait">
+                <img src="fig8.JPG" alt="Work Eight">
+                <p class="caption">Work Eight</p>
+            </a>
 
-</main>
+        </div>
+
+    </main>
 
 </div>
-
-<script>
-const works = document.querySelectorAll(".work");
-const image = document.getElementById("main-image");
-
-works.forEach(item => {
-    item.addEventListener("click", () => {
-
-        // change image
-        image.src = item.dataset.img;
-
-        // update active state
-        works.forEach(w => w.classList.remove("active"));
-        item.classList.add("active");
-
-    });
-});
-</script>
 
 </body>
 </html>
