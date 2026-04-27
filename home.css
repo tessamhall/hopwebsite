@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: 19px;
     color: #111;
     background: #fff;
 }
@@ -23,7 +23,7 @@ body {
 }
 
 .sidebar h1 {
-    font-size: 22px;
+    font-size: 28px;
     font-weight: 400;
     margin-bottom: 40px;
     letter-spacing: 0.5px;
@@ -52,6 +52,12 @@ body {
     user-select: none;
 }
 
+.work-description {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
 .work:hover {
     opacity: 1;
 }
@@ -60,6 +66,20 @@ body {
 .work.active {
     opacity: 1;
     text-decoration: underline;
+}
+
+.image-wrapper {
+    max-width: 70%;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-wrapper.portrait {
+    max-width: 40%;
 }
 
 /* =========================
