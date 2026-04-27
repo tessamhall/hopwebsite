@@ -97,6 +97,11 @@ body {
 
 /* LINKS (clean look for contact page) */
 .content a {
+    color: #777;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.content a:hover {
     color: #111;
-    text-decoration: underline;
 }
