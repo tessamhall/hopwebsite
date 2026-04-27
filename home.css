@@ -6,7 +6,9 @@ body {
     background: #fff;
 }
 
-/* Layout */
+/* =========================
+   MAIN LAYOUT
+========================= */
 .container {
     display: flex;
 }
@@ -54,46 +56,47 @@ body {
     opacity: 1;
 }
 
-/* ACTIVE STATE */
+/* ACTIVE WORK */
 .work.active {
     opacity: 1;
     text-decoration: underline;
 }
 
-/* RIGHT CONTENT */
-.content {
-    margin-left: 30%;
-    width: 70%;
-    padding: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* IMAGE */
-.content img {
-    max-width: 75%;
-    height: auto;
-}
-
-
+/* =========================
+   RIGHT CONTENT AREA
+========================= */
 .content {
     margin-left: 30%;
     width: 70%;
     padding: 60px;
     box-sizing: border-box;
-    line-height: 1.6;
 }
 
-/* spacing between text elements */
+/* IMAGE (works page only) */
+.content img {
+    max-width: 75%;
+    height: auto;
+    display: block;
+}
+
+/* =========================
+   TYPOGRAPHY (ALL PAGES)
+========================= */
 .content p {
-    margin: 0 0 18px 0;
+    margin: 0 0 16px 0;
+    line-height: 1.6;
     font-size: 16px;
 }
 
-/* headings spacing (for CV page etc.) */
-.content h2 {
-    font-size: 18px;
+.content h1,
+.content h2,
+.content h3 {
+    margin: 0 0 16px 0;
     font-weight: normal;
-    margin: 30px 0 10px 0;
+}
+
+/* LINKS (clean look for contact page) */
+.content a {
+    color: #111;
+    text-decoration: underline;
 }
