@@ -34,7 +34,7 @@
     </aside>
 
     <main class="content">
-        <img id="main-image" src="fig1.JPG">
+        <img id="main-image" src="./fig1.JPG">
     </main>
 
 </div>
@@ -44,11 +44,15 @@ const works = document.querySelectorAll(".work");
 const image = document.getElementById("main-image");
 
 works.forEach(item => {
-    item.addEventListener("mouseenter", () => {
+    item.addEventListener("click", () => {
+
+        // change image
         image.src = item.dataset.img;
 
+        // update active state
         works.forEach(w => w.classList.remove("active"));
         item.classList.add("active");
+
     });
 });
 </script>
