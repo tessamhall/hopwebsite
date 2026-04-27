@@ -125,3 +125,36 @@ body {
 .content a:hover {
     color: #111;
 }
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.gallery-item {
+    text-decoration: none;
+    color: #111;
+}
+
+/* image sizing */
+.gallery-item img {
+    max-width: 70%;
+    height: auto;
+}
+
+/* portrait override */
+.gallery-item.portrait img {
+    max-width: 40%;
+}
+
+/* caption */
+.caption {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+
+
+
+
