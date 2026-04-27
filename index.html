@@ -13,6 +13,7 @@
 
     <!-- LEFT SIDEBAR -->
     <aside class="sidebar">
+
         <h1>Hope Florin</h1>
 
         <nav>
@@ -21,21 +22,31 @@
             <a href="cv.html">CV</a>
         </nav>
 
+        <!-- FULL WORK LIST ON HOMEPAGE -->
         <div class="work-list">
-            <p onclick="location.href='works.html'">Works</p>
+
+            <p onclick="showWork('fig1.JPG')">Work One</p>
+            <p onclick="showWork('fig2.JPG')">Work Two</p>
+            <p onclick="showWork('fig3.JPG')">Work Three</p>
+            <p onclick="showWork('fig4.JPG')">Work Four</p>
+            <p onclick="showWork('fig5.JPG')">Work Five</p>
+
         </div>
+
     </aside>
 
     <!-- RIGHT CONTENT -->
     <main class="content">
-
-        <p>
-            Welcome to my portfolio.
-        </p>
-
+        <img id="main-image" src="JPG.png">
     </main>
 
 </div>
+
+<script>
+function showWork(image) {
+    document.getElementById("main-image").src = image;
+}
+</script>
 
 </body>
 </html>
