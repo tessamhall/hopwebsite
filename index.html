@@ -11,7 +11,6 @@
 
 <div class="container">
 
-    <!-- LEFT SIDEBAR -->
     <aside class="sidebar">
 
         <h1>Hope Florin</h1>
@@ -22,20 +21,18 @@
             <a href="cv.html">CV</a>
         </nav>
 
-        <!-- FULL WORK LIST ON HOMEPAGE -->
         <div class="work-list">
 
-            <p onclick="showWork('fig1.JPG')">Work One</p>
-            <p onclick="showWork('fig2.JPG')">Work Two</p>
-            <p onclick="showWork('fig3.JPG')">Work Three</p>
-            <p onclick="showWork('fig4.JPG')">Work Four</p>
-            <p onclick="showWork('fig5.JPG')">Work Five</p>
+            <p class="work active" data-img="fig1.JPG">Work One</p>
+            <p class="work" data-img="fig2.JPG">Work Two</p>
+            <p class="work" data-img="fig3.JPG">Work Three</p>
+            <p class="work" data-img="fig4.JPG">Work Four</p>
+            <p class="work" data-img="fig5.JPG">Work Five</p>
 
         </div>
 
     </aside>
 
-    <!-- RIGHT CONTENT -->
     <main class="content">
         <img id="main-image" src="fig1.JPG">
     </main>
@@ -43,12 +40,18 @@
 </div>
 
 <script>
-function showWork(image) {
-    document.getElementById("main-image").src = image;
-}
+const works = document.querySelectorAll(".work");
+const image = document.getElementById("main-image");
+
+works.forEach(item => {
+    item.addEventListener("mouseenter", () => {
+        image.src = item.dataset.img;
+
+        works.forEach(w => w.classList.remove("active"));
+        item.classList.add("active");
+    });
+});
 </script>
 
 </body>
 </html>
-
-
