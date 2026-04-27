@@ -99,3 +99,6 @@ body {
 }
 
 
+.content p, .content h2 {
+    max-width: 600px;
+}
