@@ -1,47 +1,63 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px; /* bigger text */
     color: #111;
-    background: #fff;
 }
 
-header {
+/* Layout */
+.container {
     display: flex;
-    justify-content: space-between;
-    padding: 20px 30px;
 }
 
-h1 {
-    font-size: 16px;
-    font-weight: normal;
-    margin: 0;
+/* LEFT SIDEBAR */
+.sidebar {
+    width: 30%;
+    height: 100vh;
+    position: fixed;
+    padding: 40px;
+    box-sizing: border-box;
 }
 
-nav a {
-    margin-left: 20px;
+.sidebar h1 {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.sidebar nav a {
+    display: block;
+    margin-bottom: 10px;
     text-decoration: none;
     color: #111;
-    font-size: 14px;
 }
 
-nav a:hover {
+.sidebar nav a:hover {
     text-decoration: underline;
 }
 
-main {
-    padding: 60px 30px;
+/* Work list */
+.work-list {
+    margin-top: 40px;
 }
 
-.placeholder-image {
-    max-width: 100%;
+.work-list p {
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.work-list p:hover {
+    text-decoration: underline;
+}
+
+/* RIGHT CONTENT */
+.content {
+    margin-left: 30%;
+    width: 70%;
+    padding: 40px;
+}
+
+/* IMAGE FIX (smaller + nicer) */
+.content img {
+    max-width: 70%;
     height: auto;
-    display: block;
 }
-
-footer {
-    padding: 20px 30px;
-    font-size: 12px;
-    color: #666;
-}
-
-
