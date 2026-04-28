@@ -177,8 +177,19 @@ body {
 ========================= */
 @media (max-width: 768px) {
     .sidebar {
-        padding: 24px 20px 16px;
-    }
+    width: 360px;
+    height: 100vh;
+    position: fixed;
+    padding: 50px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    scrollbar-width: none;        /* Firefox */
+    -ms-overflow-style: none;     /* IE/Edge */
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;                /* Chrome/Safari */
+}
 
     .sidebar h1 {
         font-size: 32px;
@@ -193,9 +204,10 @@ body {
     .sidebar nav a {
         font-size: 15px;
     }
-.work-list {
+
+    .work-list {
         gap: 6px 16px;
-    }
+}
 
     .work-list a {
         font-size: 15px;
@@ -214,7 +226,9 @@ body {
         max-width: 100%;
     }
 
-.content img {
+     .content img {
         max-width: 100%;
     }
 }
+
+        
