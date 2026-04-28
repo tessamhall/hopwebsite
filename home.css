@@ -176,24 +176,16 @@ body {
    MOBILE
 ========================= */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
     .sidebar {
-    width: 360px;
-    height: 100vh;
-    position: fixed;
-    padding: 50px;
-    box-sizing: border-box;
-    overflow-y: auto;
-    scrollbar-width: none;        /* Firefox */
-    -ms-overflow-style: none;     /* IE/Edge */
-}
-
-.sidebar::-webkit-scrollbar {
-    display: none;                /* Chrome/Safari */
-}
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 24px 20px 16px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 0 24px;
+    }
 
     .sidebar h1 {
         font-size: 32px;
@@ -205,26 +197,39 @@ body {
         display: flex;
         flex-wrap: wrap;
         gap: 0 20px;
+        margin-bottom: 8px;
     }
 
     .sidebar nav a {
-        font-size: 18px;
-        margin-bottom: 0;
+        font-size: 16px;
     }
 
-    /* Hide the long work list on mobile — the gallery itself serves as nav */
     .work-list {
-        display: none;
+        width: 100%;
+    }
+
+    .work-list p {
+        font-size: 16px;
+        margin: 4px 0 0 0;
+        cursor: pointer;
+        opacity: 0.6;
+    }
+
+    .work-list p:hover {
+        opacity: 1;
     }
 
     .content {
-        margin-left: 0;
+        margin-left: 0;        /* this is the critical line */
         padding: 20px;
     }
 
-    .content img,
-    .gallery-item img,
-    .gallery-item.portrait img {
+    .content img {
+        max-width: 100%;
+    }
+
+    .image-wrapper,
+    .image-wrapper.portrait {
         max-width: 100%;
     }
 }
