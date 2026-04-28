@@ -20,13 +20,15 @@ body {
     position: fixed;
     padding: 50px;
     box-sizing: border-box;
+    overflow-y: auto; /* ADD THIS */
 }
 
 .sidebar h1 {
     font-size: 52px;
-    font-weight: 400;
+    font-weight: 500;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin-bottom: 40px;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
 }
 
 /* NAV */
@@ -142,7 +144,7 @@ body {
 .gallery {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 20px;
 }
 
 .gallery-item {
@@ -152,13 +154,13 @@ body {
 
 /* image sizing */
 .gallery-item img {
-    max-width: 70%;
+    max-width: 85%;
     height: auto;
 }
 
 /* portrait override */
 .gallery-item.portrait img {
-    max-width: 40%;
+    max-width: 55%;
 }
 
 /* caption */
