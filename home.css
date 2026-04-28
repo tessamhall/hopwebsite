@@ -176,48 +176,23 @@ body {
    MOBILE
 ========================= */
 @media (max-width: 768px) {
-   .sidebar {
+
+    .sidebar {
+        position: relative;   /* no longer fixed */
+        width: 100%;          /* full width */
+        height: auto;
         padding: 24px 20px 16px;
-    }
-
-    .sidebar h1 {
-        font-size: 32px;
-        margin-bottom: 16px;
-    }
-
-    .sidebar nav {
-        gap: 16px;
-        margin-bottom: 12px;
-    }
-
-    .sidebar nav a {
-        font-size: 15px;
-    }
-
-    .work-list {
-        gap: 6px 16px;
-}
-
-    .work-list a {
-        font-size: 15px;
+        overflow: visible;
     }
 
     .content {
+        margin-left: 0;       /* remove sidebar offset */
+        width: 100%;
         padding: 24px 20px;
     }
-
-    .gallery {
-        gap: 36px;
-    }
-
-    .gallery-item img,
-    .gallery-item.portrait img {
-        max-width: 100%;
-    }
-
-     .content img {
-        max-width: 100%;
-    }
 }
+
+
+
 
         
