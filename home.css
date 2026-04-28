@@ -10,17 +10,17 @@ body {
    MAIN LAYOUT
 ========================= */
 .container {
-    display: flex;
+    display: block;
 }
 
 /* LEFT SIDEBAR */
 .sidebar {
-    width: 30%;
+    width: 360px;
     height: 100vh;
     position: fixed;
     padding: 50px;
     box-sizing: border-box;
-    overflow-y: auto; /* ADD THIS */
+    overflow-y: auto;
 }
 
 .sidebar h1 {
@@ -101,8 +101,7 @@ body {
    RIGHT CONTENT AREA
 ========================= */
 .content {
-    margin-left: 30%;
-    width: 70%;
+    margin-left: 360px;
     padding: 60px;
     box-sizing: border-box;
 }
