@@ -181,14 +181,14 @@ body {
         position: relative;
         width: 100%;
         height: auto;
-        padding: 20px 10px 10px;
+        padding: 10px 10px 10px;
         overflow: visible;
     }
 
     .content {
         margin-left: 0;
         width: 100%;
-        padding: 24px 20px;
+        padding: 10px 10px;
     }
     
     .sidebar nav {
@@ -200,7 +200,7 @@ body {
     .work-list {
         display: flex;
         flex-wrap: wrap;
-        gap: 6px 10px;
+        gap: 5px 5px;
     }
 
 }
