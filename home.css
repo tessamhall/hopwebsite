@@ -176,20 +176,9 @@ body {
    MOBILE
 ========================= */
 @media (max-width: 768px) {
-    .sidebar {
-    width: 360px;
-    height: 100vh;
-    position: fixed;
-    padding: 50px;
-    box-sizing: border-box;
-    overflow-y: auto;
-    scrollbar-width: none;        /* Firefox */
-    -ms-overflow-style: none;     /* IE/Edge */
-}
-
-.sidebar::-webkit-scrollbar {
-    display: none;                /* Chrome/Safari */
-}
+   .sidebar {
+        padding: 24px 20px 16px;
+    }
 
     .sidebar h1 {
         font-size: 32px;
