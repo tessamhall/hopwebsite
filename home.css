@@ -176,8 +176,9 @@ body {
     }
 
     .sidebar {
-        padding: 30px;
-    }
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+}
 
     .gallery-item img,
     .gallery-item.portrait img {
