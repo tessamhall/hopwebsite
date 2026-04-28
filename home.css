@@ -10,7 +10,7 @@ body {
    MAIN LAYOUT
 ========================= */
 .container {
-    display: block;
+    display: flex;
 }
 
 /* LEFT SIDEBAR */
@@ -21,6 +21,13 @@ body {
     padding: 50px;
     box-sizing: border-box;
     overflow-y: auto;
+    scrollbar-width: none;        /* Firefox */
+    -ms-overflow-style: none;     /* IE/Edge */
+    border-right: none;           /* ensure no border creates a divider */
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;                /* Chrome/Safari */
 }
 
 .sidebar h1 {
@@ -64,7 +71,6 @@ body {
     opacity: 1;
 }
 
-/* ACTIVE WORK */
 .work.active {
     opacity: 1;
     text-decoration: underline;
@@ -104,9 +110,9 @@ body {
     margin-left: 360px;
     padding: 60px;
     box-sizing: border-box;
+    width: 100%;
 }
 
-/* IMAGE (works page only) */
 .content img {
     max-width: 75%;
     height: auto;
@@ -114,7 +120,7 @@ body {
 }
 
 /* =========================
-   TYPOGRAPHY (ALL PAGES)
+   TYPOGRAPHY
 ========================= */
 .content p {
     margin: 0 0 16px 0;
@@ -129,7 +135,6 @@ body {
     font-weight: normal;
 }
 
-/* LINKS (clean look for contact page) */
 .content a {
     color: #777;
     text-decoration: none;
@@ -140,6 +145,9 @@ body {
     color: #111;
 }
 
+/* =========================
+   GALLERY
+========================= */
 .gallery {
     display: flex;
     flex-direction: column;
@@ -151,41 +159,70 @@ body {
     color: #111;
 }
 
-/* image sizing */
 .gallery-item img {
     max-width: 90%;
     height: auto;
 }
 
-/* portrait override */
 .gallery-item.portrait img {
     max-width: 60%;
 }
 
-/* caption */
 .caption {
     margin-top: 8px;
     font-size: 14px;
 }
 
-
-@media (max-width: 900px) {
-    .content {
-        padding: 30px;
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
     }
 
     .sidebar {
-    overflow-y: auto;
-    scrollbar-width: none; /* Firefox */
-}
-    .sidebar::-webkit-scrollbar {
-    display: none;
-}
+        position: static;          /* flows in document, no longer fixed */
+        width: 100%;
+        height: auto;
+        padding: 24px 20px 16px;
+        overflow-y: visible;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 0 24px;
+    }
 
+    .sidebar h1 {
+        font-size: 32px;
+        margin-bottom: 12px;
+        width: 100%;
+    }
+
+    .sidebar nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 20px;
+    }
+
+    .sidebar nav a {
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+
+    /* Hide the long work list on mobile — the gallery itself serves as nav */
+    .work-list {
+        display: none;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .content img,
     .gallery-item img,
     .gallery-item.portrait img {
         max-width: 100%;
     }
 }
-
-
