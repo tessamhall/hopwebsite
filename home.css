@@ -23,7 +23,6 @@ body {
     overflow-y: auto;
     scrollbar-width: none;        /* Firefox */
     -ms-overflow-style: none;     /* IE/Edge */
-    border-right: none;           /* ensure no border creates a divider */
 }
 
 .sidebar::-webkit-scrollbar {
@@ -182,16 +181,19 @@ body {
     }
 
     .sidebar {
-        position: static;          /* flows in document, no longer fixed */
-        width: 100%;
-        height: auto;
-        padding: 24px 20px 16px;
-        overflow-y: visible;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: baseline;
-        gap: 0 24px;
-    }
+    width: 360px;
+    height: 100vh;
+    position: fixed;
+    padding: 50px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    scrollbar-width: none;        /* Firefox */
+    -ms-overflow-style: none;     /* IE/Edge */
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;                /* Chrome/Safari */
+}
 
     .sidebar h1 {
         font-size: 32px;
